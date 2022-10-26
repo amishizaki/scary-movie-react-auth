@@ -8,27 +8,36 @@ const linkStyle = {
 }
 const authenticatedOptions = (
 	<>
-		<Nav.Item>
-			<Link to='change-password' style={linkStyle}>
-				Change Password
-			</Link>
-		</Nav.Item>
-		<Nav.Item>
-			<Link to='sign-out' style={linkStyle}>
-				Sign Out
-			</Link>
-		</Nav.Item>
+		<Navbar variant='dark' expand='md'>
+			<Nav.Link>
+				<Link to='scary-movies' style={linkStyle}>
+					Create a Scary Movie
+				</Link>
+			</Nav.Link>
+			<Nav.Link>
+				<Link to='change-password' style={linkStyle}>
+					Change Password
+				</Link>
+			</Nav.Link>
+			<Nav.Link>
+				<Link to='sign-out' style={linkStyle}>
+					Sign Out
+				</Link>
+			</Nav.Link>
+		</Navbar>
 	</>
 )
 
 const unauthenticatedOptions = (
 	<>
-        <Nav.Item>
-		    <Link to='sign-up' style={linkStyle}>Sign Up</Link>
-        </Nav.Item>
-        <Nav.Item>
-		    <Link to='sign-in' style={linkStyle}>Sign In</Link>
-        </Nav.Item>
+		<Navbar variant='dark' expand='md'>
+			<Nav.Link>
+				<Link to='sign-up' style={linkStyle}>Sign Up</Link>
+			</Nav.Link>
+			<Nav.Link>
+				<Link to='sign-in' style={linkStyle}>Sign In</Link>
+			</Nav.Link>
+		</Navbar>
 	</>
 )
 
@@ -43,10 +52,10 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-	<Navbar bg='primary' variant='dark' expand='md'>
+	<Navbar bg='dark' variant='dark' expand='md'>
 		<Navbar.Brand>
             <Link to='/' style={linkStyle}>
-                scary-movies
+                Scary Movies
             </Link>
         </Navbar.Brand>
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />
