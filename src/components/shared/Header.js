@@ -8,43 +8,39 @@ const linkStyle = {
 }
 const authenticatedOptions = (
 	<>
-		<Navbar variant='dark' expand='md'>
-			<Nav.Link>
-				<Link to='scary-movies' style={linkStyle}>
-					Create a Scary Movie
-				</Link>
-			</Nav.Link>
-			<Nav.Link>
-				<Link to='change-password' style={linkStyle}>
-					Change Password
-				</Link>
-			</Nav.Link>
-			<Nav.Link>
-				<Link to='sign-out' style={linkStyle}>
-					Sign Out
-				</Link>
-			</Nav.Link>
-		</Navbar>
+		<Nav.Link>
+			<Link to='create' style={linkStyle}>
+				Create a Scary Movie
+			</Link>
+		</Nav.Link>
+		<Nav.Link>
+			<Link to='change-password' style={linkStyle}>
+				Change Password
+			</Link>
+		</Nav.Link>
+		<Nav.Link>
+			<Link to='sign-out' style={linkStyle}>
+				Sign Out
+			</Link>
+		</Nav.Link>
 	</>
 )
 
 const unauthenticatedOptions = (
 	<>
-		<Navbar variant='dark' expand='md'>
-			<Nav.Link>
-				<Link to='sign-up' style={linkStyle}>Sign Up</Link>
-			</Nav.Link>
-			<Nav.Link>
-				<Link to='sign-in' style={linkStyle}>Sign In</Link>
-			</Nav.Link>
-		</Navbar>
+		<Nav.Link>
+			<Link to='sign-up' style={linkStyle}>Sign Up</Link>
+		</Nav.Link>
+		<Nav.Link>
+			<Link to='sign-in' style={linkStyle}>Sign In</Link>
+		</Nav.Link>
 	</>
 )
 
 const alwaysOptions = (
 	<>
 		<Nav.Link>
-			<Link to='/' style={linkStyle}>
+			<Link to='scary-movies' style={linkStyle}>
 				Home
 			</Link>
 		</Nav.Link>

@@ -13,6 +13,8 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import ScaryMovieCreate from './components/ScaryMovieCreate'
+import ScaryMovieIndex from './components/ScaryMovieIndex'
+import ScaryMovieShow from './components/ScaryMovieShow'
 
 const App = () => {
 
@@ -70,10 +72,24 @@ const App = () => {
               </RequireAuth>}
           />
 		  <Route
-            path='/scary-movies'
+            path='/create'
             element={
               <RequireAuth user={user}>
                 <ScaryMovieCreate msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+		  <Route
+            path='/scary-movies'
+            element={
+              <RequireAuth user={user}>
+                <ScaryMovieIndex msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+		  <Route
+            path='/scary-movies/:id'
+            element={
+              <RequireAuth user={user}>
+                <ScaryMovieShow msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
 				</Routes>
