@@ -16,6 +16,8 @@ import ScaryMovieCreate from './components/ScaryMovieCreate'
 import ScaryMovieIndex from './components/ScaryMovieIndex'
 import ScaryMovieShow from './components/ScaryMovieShow'
 
+import './app.css'
+
 const App = () => {
 
   const [user, setUser] = useState(null)
@@ -47,7 +49,7 @@ const App = () => {
 			<Fragment>
 				<Header user={user} />
 				<Routes>
-					<Route path='/' element={<Home msgAlert={msgAlert} user={user} />} />
+					<Route path='/home' element={<Home msgAlert={msgAlert} user={user} />} />
 					<Route
 						path='/sign-up'
 						element={<SignUp msgAlert={msgAlert} setUser={setUser} />}
@@ -76,6 +78,13 @@ const App = () => {
             element={
               <RequireAuth user={user}>
                 <ScaryMovieCreate msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+		  <Route
+            path='/'
+            element={
+              <RequireAuth user={user}>
+                <ScaryMovieIndex msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
 		  <Route
