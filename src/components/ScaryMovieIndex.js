@@ -31,7 +31,7 @@ const ScaryMovieIndex = ({ user, msgAlert }) => {
     return (
         <>
             <h1>Spooky Scary Movies</h1>
-            <ul>{allScaryMoviesJSX}</ul>
+            <ul style={{color: 'black'}}>{allScaryMoviesJSX}</ul>
         </>
     )
 }

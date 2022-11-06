@@ -1,4 +1,4 @@
-import ScaryMovieIndex from "./ScaryMovieIndex"
+// import ScaryMovieIndex from "./ScaryMovieIndex"
 
 const Home = (props) => {
 	// const { msgAlert, user } = props
@@ -6,12 +6,12 @@ const Home = (props) => {
 
 	
 	return (
-		<>
+		<div className="container-md">
 			<h2>Spooky Scary Movies</h2>
 			{/* <ul>
 				<ScaryMovieIndex />
 			</ul> */}
-		</>
+		</div>
 	)
 }
 
