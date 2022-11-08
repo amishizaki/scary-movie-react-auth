@@ -1,4 +1,4 @@
-import React, { useEffect, useState, error } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { scaryMovieShow, scaryMovieUpdate, scaryMovieDelete } from '../api/scaryMovie'
 import ScaryMovieUpdate from './ScaryMovieUpdate'
@@ -19,10 +19,10 @@ const ScaryMovieShow = ({user, msgAlert}) => {
             setScaryMovie(res.data.scaryMovie)
         }
         )
-        .catch(() => {
+        .catch((error) => {
             msgAlert({
                 heading: 'Failure',
-                message: 'Show Scary Movie Failure: ' + error,
+                message: 'Show Scary Movie Failure:' + error,
                 variant: 'danger'
             })
         })
@@ -48,7 +48,7 @@ const ScaryMovieShow = ({user, msgAlert}) => {
                 variant: 'success'
             })
         })
-        .catch(() => {
+        .catch((error) => {
             msgAlert({
                 heading: 'Failure',
                 message: 'Created Scary Movie Failure' + error,
