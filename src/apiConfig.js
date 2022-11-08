@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
     // YOU MUST CHANGE PRODUCTION URL WHEN DEPLOYING
-	production: 'https://scary-movies-api.fly.dev',
+	production: 'https://scary-movie-api.fly.dev',
 	development: 'http://localhost:8000',
 }
 
